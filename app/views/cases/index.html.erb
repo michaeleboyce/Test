@@ -1,0 +1,29 @@
+<h1>Listing Cases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Case number</th>
+      <th>Country</th>
+      <th>Date fled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cases.each do |c| %>
+      <tr>
+        <td><%= c.case_number %></td>
+        <td><%= c.country %></td>
+        <td><%= c.date_fled %></td>
+        <td><%= link_to 'Show', c %></td>
+        <td><%= link_to 'Edit', edit_case_path(c) %></td>
+        <td><%= link_to 'Destroy', c, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Case', new_case_path %>
