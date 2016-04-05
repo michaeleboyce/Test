@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */
+
  
   
       html, body {
@@ -65,3 +65,40 @@
         height: 20px;
         margin-bottom: 2px;
       }
+      */
+
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid blue;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+
+.textarea{
+  padding: 2px;
+  width: 90%;
+  border: 2px solid blue;
+  border-radius: 4px;
+}
+
+.user-links-container{
+  background: #f2f6f8; /* Old browsers */
+  background: -moz-linear-gradient(left, #f2f6f8 0%, #b5c6d0 24%, #b5c6d0 24%, #d8e1e7 50%, #e0eff9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #f2f6f8 0%,#b5c6d0 24%,#b5c6d0 24%,#d8e1e7 50%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #f2f6f8 0%,#b5c6d0 24%,#b5c6d0 24%,#d8e1e7 50%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 */
+}
+
+.user-links{
+  float: right;
+}
+
+a {
+    background-color: #f2f6f8;
+    border: 1px solid #C0DEED; 
+    text-decoration: none !important;
+}
