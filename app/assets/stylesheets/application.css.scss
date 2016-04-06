@@ -10,95 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
 
- 
-  
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      	background-color: whitesmoke;
-      }
-      #map {
-        height: 100%;
-      }
-
-      #locationField, #controls {
-        position: relative;
-        width: 480px;
-      }
-      #autocomplete {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 99%;
-      }
-      .label {
-        text-align: right;
-        font-weight: bold;
-        width: 100px;
-        color: #303030;
-      }
-      #address {
-        background-color: #f0f0ff;
-        width: 480px;
-        padding-right: 2px;
-        font-family: -webkit-body;
-        border-style: solid;
-        border-width: 2px;
-      }
-      #address td {
-        font-size: 10pt;
-      }
-      .field {
-        width: 99%;
-      }
-      .slimField {
-        width: 80px;
-      }
-      .wideField {
-        width: 200px;
-      }
-      #locationField {
-        height: 20px;
-        margin-bottom: 2px;
-      }
-      */
+*/
 
 
-.container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
 
-  border: 1px solid blue;
-  border-radius: 2px;
-  transform: translate(-50%, -50%);
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-.textarea{
-  padding: 2px;
-  width: 90%;
-  border: 2px solid blue;
-  border-radius: 4px;
-}
-
-.user-links-container{
-  background: #f2f6f8; /* Old browsers */
-  background: -moz-linear-gradient(left, #f2f6f8 0%, #b5c6d0 24%, #b5c6d0 24%, #d8e1e7 50%, #e0eff9 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #f2f6f8 0%,#b5c6d0 24%,#b5c6d0 24%,#d8e1e7 50%,#e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #f2f6f8 0%,#b5c6d0 24%,#b5c6d0 24%,#d8e1e7 50%,#e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 */
-}
-
-.user-links{
-  float: right;
-}
-
-a {
-    background-color: #f2f6f8;
-    border: 1px solid #C0DEED; 
-    text-decoration: none !important;
-}
+$bodyBackground: #e0e0e0;

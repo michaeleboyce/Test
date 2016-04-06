@@ -14,8 +14,17 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<div class="container">
-<%= yield %>
+<div id="main container" class="container">
+	<div class = "row">
+		<div class="col-md-3">
+			<h2>Side Bar</h2>
+		</div>
+		<div id="content" class= "col-md-9">
+			<div class="col-md-7">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

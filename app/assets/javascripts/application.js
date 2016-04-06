@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//=require bootstrap-sprockets
 //= require_tree .
-
 // This example displays an address form, using the autocomplete feature
 // of the Google Places API to help users fill in the information.
 

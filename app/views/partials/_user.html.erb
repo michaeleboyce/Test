@@ -10,12 +10,14 @@
     <li><a href="#"><i class="i"></i> Make admin</a></li>
   </ul>
 </div-->
-<div class="user-links-container">
-  <% if user_signed_in? %>
-    <%=link_to "Logout", destroy_user_session_path, :method => :delete %>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <% if user_signed_in? %>
+      <%=link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'navbar-link' %>
 
-  <% else %>
-    <%= link_to "Sign Up", new_user_registration_path %>
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
-</div>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %>
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'%>
+    <% end %>
+  </div>
+</nav>
