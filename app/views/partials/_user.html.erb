@@ -10,14 +10,21 @@
     <li><a href="#"><i class="i"></i> Make admin</a></li>
   </ul>
 </div-->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-fixed-top navbar-default ">
   <div class="container">
-    <% if user_signed_in? %>
-      <%=link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'navbar-link' %>
+    <ul class="nav navbar-nav navbar-left">
+    <%= link_to "Refugee Affairs Division", root_path, :class => 'navbar-brand' %> 
+      <% if user_signed_in? %>
 
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %>
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'%>
+        <%=link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'btn btn-default navbar-btn' %>
+
+      <% else %>
+
+        <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-default navbar-btn' %>
+        <%= link_to "Login", new_user_session_path, :class => 'btn btn-default navbar-btn'%>
+    </ul>
     <% end %>
   </div>
+
 </nav>
+<div class='clearfix'></div>
