@@ -8,6 +8,6 @@ one:
 
 two:
   city: MyString
-  governornate: MyString
+  governorate: MyString
   country: MyString
   description: MyText

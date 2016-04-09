@@ -1,0 +1,7 @@
+<div class="list-group">
+	<%= image_tag('ROASTlogo.jpg', :class => "img-responsive", :alt => "ROAST - Online") %>
+	<%= link_to "Look Up Location", new_search_path, :class => "list-group-item" %>
+	<% @allgovs.each do |g| %>
+		<%= link_to g, "", :class => "list-group-item" %>
+	<% end %>
+</div>

@@ -18,7 +18,7 @@ class LocationsControllerTest < ActionController::TestCase
 
   test "should create location" do
     assert_difference('Location.count') do
-      post :create, location: { city: @location.city, country: @location.country, description: @location.description, governornate: @location.governornate }
+      post :create, location: { city: @location.city, country: @location.country, description: @location.description, governorate: @location.governorate }
     end
 
     assert_redirected_to location_path(assigns(:location))
