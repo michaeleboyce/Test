@@ -27,9 +27,9 @@ var componentForm = {
 //street_number: 'short_name',
 //route: 'long_name',
 locality: 'long_name',
-administrative_area_level_1: 'short_name',
-administrative_area_level_2: 'long_name',
-neighborhood: 'long_name',
+administrative_area_level_1: 'long_name',
+//administrative_area_level_2: 'long_name',
+//neighborhood: 'long_name',
 country: 'long_name',
 //postal_code: 'short_name'
 };
@@ -63,7 +63,7 @@ for (var i = 0; i < place.address_components.length; i++) {
   var addressType = place.address_components[i].types[0];
   if (componentForm[addressType]) {
     var val = place.address_components[i][componentForm[addressType]];
-    document.getElementById(addressType).value = val;
+    document.getElementById(addressType).value = val.replace(/\u200E/g,"");
   }
 }
 }

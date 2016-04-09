@@ -1,0 +1,48 @@
+<h1> Custom Search </h1>
+
+<%= form_for @search, html:{class: "form-horizontal"} do |s| %>
+	<div class="form-group row" id="locationField">
+		<div class="col-sm-9">
+
+			<input id="autocomplete" type="text" placeholder="Enter your address" onfocus="geolocate()" class="form-control"> 
+		</div>
+	</div>
+	<div class="form-group row">
+		<%= s.label :keyword, :class => 'col-sm-3 control-label', :for=>'keywords' %><br />
+		<div class="col-sm-6">
+		<%= s.text_field :keywords, :id => 'keywords', :class => 'form-control' %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<%= s.label :governorate, :class => 'col-sm-3 control-label', :for => 'administrative_area_level_1' %> 
+		<div class="col-sm-6">
+		<%= s.select :governorate,  options_for_select(@governorates), {:include_blank => true}, {:class => 'form-control', :id => 'administrative_area_level_1'} %>
+		</div>
+	</div>
+
+
+	<div class="form-group row">
+		<%= s.label :city, :class => 'col-sm-3 control-label', :for => 'locality' %>
+		<div class="col-sm-6">
+			<%= s.text_field :city, :id => 'locality', :class => "form-control" %>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<%= s.label :country, :class => 'col-sm-3 control-label'  %>
+		<div class="col-sm-6">
+			<%= s.text_field :country, :id => 'country', :class => "form-control" %>
+		</div>
+	</div>
+
+	<div class="actions"><%=s.submit "Search", class: "btn btn-default" %>
+	</div>
+
+<% end %>
+
+<%- link_to 'Locations', locations_path %>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= @api_key %>&libraries=places&callback=initAutocomplete"
+      async defer>
+  </script>

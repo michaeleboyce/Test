@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  city: MyString
+  governorate: MyString
+  country: MyString
+
+two:
+  keywords: MyString
+  city: MyString
+  governorate: MyString
+  country: MyString
